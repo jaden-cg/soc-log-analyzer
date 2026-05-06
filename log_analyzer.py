@@ -8,7 +8,7 @@ with open(log_file, "r") as f:
             time.sleep(1)
             continue
 
-        # RULE 1: Failed login detection
+# RULE 1: Failed login detection
         if "Failed password" in line:
             ip_match = re.search(r"from (\d+\.\d+\.\d+\.\d+)", line)
             user_match = re.search(r"for (\w+)", line)
